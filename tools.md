@@ -16,11 +16,17 @@
 - http://fotoforensic.com/
 - http://pixlr.com/editor/
 
+### Audio
+- https://convert.ing-now.com/mp3-audio-waveform-graphic-generator/
+- https://audio-joiner.com/
+- https://clideo.com/merge-audio
+
 ### Ciphers:
 
 - http://members.aon.at/cipherclerk/Doc/CipherList.html
 - http://rumkin.com/tools/cipher/
 - http://members.aon.at/cipherclerk/CipherClerk.html
+- https://cryptii.com/pipes/rail-fence-cipher
 
 ### Anagrams:
 
