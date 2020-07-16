@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Decode</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <span id="brand">
+                        <a>Decode</a>
+                  </span>
+        </nav>
+        <div class="container">
+            <div class="hero-content">
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Então você quer decodificar...</h3>
+                        <p>Esta é uma introdução sobre como começar a entrar em jogos de decodificação. Embora existam muitas ferramentas e orientações úteis na Internet, muitos novos decodificadores podem facilmente ficar sobrecarregados ao descobrir quais
+                            ferramentas usar ou por onde começar quando receberem algo como "<strong>IXRuZW1uZXRoZ2lsbkUgZWh0IG5pb0o=</strong>". Esta cartilha mostrará "como criar estratégias" quando for apresentado um problema de decodificação com exemplos.
+                            No final, você terá o entendimento básico do que está acontecendo e poderá usá-lo para experimentar e aprender o grande número de ferramentas de decodificação disponíveis na Internet. <br>Como vamos fazer:</p>
+                        <ol>
+                            <li>Conhecer as duas maneiras pelas quais as mensagens criptografadas/codificadas são criadas.</li>
+                            <li>Reconhecer/adivinhar pontos de partida quando encontrar uma mensagem criptografada/codificada.</li>
+                        </ol>
+                        <p>Então você pode usar ferramentas como:</p>
+                        <ul>
+                            <Li><a href="https://cryptii.com/" target="_blank">cryptii</a></Li>
+                            <Li><a href="https://multidec.web-lab.at/" target="_blank">MultiDec</a></Li>
+                            <Li><a href="https://www.dcode.fr/" target="_blank">dcode.fr</a></Li>
+                            <Li><a href="https://tools.decodeingress.me/#/" target="_blank">decodeingress.me</a></Li>
+                            <Li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></Li>
+                            <Li><a href="http://rumkin.com/tools/cipher/" target="_blank">Rumkin Cipher Tools</a></Li>
+                            <Li><a href="http://fotoforensic.com/" target="_blank">FotoForensics</a></Li>
+                            <Li><a href="https://ingress.codes/2016/05/19/useful-tools-and-weblinks-for-decoding/" target="_blank">ingress.codes compiled list</a></Li>
+                        </ul>
+                        <h5>Como criptografar/codificar uma mensagem:</h5>
+                        <p>Para descobrir como decodificar, primeiro você tem que saber como as mensagens são codificadas. Para facilitar as coisas, você pode pensar na codificação como uma combinação dos seguintes 2 processos:</p>
+                        <ul>
+                            <li><strong>Criptografar</strong> é pegar a mensagem e reorganizar ou substituir os caracteres para ocultar uma mensagem. Em outras palavras, a criptografia mantém o mesmo conjunto de caracteres (por exemplo, caracteres ASCII a-z
+                                A-Z e numerais 0-9), mas substitui um por outro ou reorganiza sua ordem. Por exemplo, reverter a ordem dos caracteres seria criptografar. Esses métodos são chamados cifras. <strong>hello olleh</strong></li>
+                            <li><strong>Codificação</strong> é uma espécie de inverso de criptografar em que mantém a mensagem a mesma, apenas representa-a de uma maneira diferente. Por exemplo, o código Morse codificaria como. Esses métodos são chamados
+                                de codificações. <strong>hello .... . .-.. .-.. ---</strong></li>
+                        </ul>
+                        <p>A seguir, um rápido resumo de algumas das técnicas básicas. A criptografia geralmente pode ser considerada como uma das duas técnicas: (a) algum tipo de reorganização da ordem e (b) substituição de letras por outras. Dada uma mensagem,
+                            você pode esconder seu significado fazendo coisas como:</p>
+                        <dl>
+                            <dt>Reorganização: Invertendo a ordem dos caracteres</dt><br>
+                            <dd><strong>hello</strong> como <strong>olleh</strong></dd><br>
+                            <dt>Reorganização: Pular caracteres, pular cifra</dt>
+                            <p>Em uma cifra de salto você escreve a mensagem a cada n caracteres. Então id n=4: torna-se Como criptografar facilmente: escrever a mensagem em várias linhas, cada uma com n caracteres. Assim, com n=4: <strong>abcdefgh aebfcgdh</strong></p>
+                            <dd><strong>abcd<br>efgh</strong></dd>
+                        </dl>
+                        <p>Em seguida, leia as colunas, da esquerda para a direita:<br>Para decodificar, escreva sua mensagem em linhas e leia as colunas. Aqui você pode ter que tentar diferentes combinações para fazê-lo funcionar, ou usar algo como a ferramenta
+                            de salto da <a href="https://multidec.web-lab.at/" target="_blank">MultiDec</a> para fazer muitas combinações ao mesmo tempo.<br> Por exemplo, está escrito como:<br><br><strong>ae bf  cg dh aebfcgdh</strong></p>
+                        <dd><strong>ae<br>bf<br>cg<br>dh</strong></dd>
+                        <p>Em seguida, lendo as colunas: <strong>abcdefgh</strong></p>
+                        <h5>Reorganização: Variantes da cifra de salto</h5>
+                        <p>Há muitas variantes para essa cifra, e é por isso que você verá muitas online. Por exemplo, você pode usar uma senha para alterar <i>n</i> depois de cada caractere, você tem um <a href="https://www.dcode.fr/transposition-cipher" target="_blank">transposition cipher</a>.
+                            Você também pode mudar <i>n</i> de uma maneira inteligente usando <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank">Rail fence cipher</a>. Além disso, nem sempre você precisa ir da esquerda para a direita, de cima para
+                            baixo, mas a direção pode mudar, bem como em uma <a href="https://www.dcode.fr/route-cipher" target="_blank">route/path cipher</a>. E há muitos, muitos, mais. O ponto aqui é que você pode precisar forçar a força bruta tentando diferentes técnicas
+                            até que um <strong>"clique"</strong>. Felizmente, existem muitas ferramentas online para experimentar.</p>
+                        <h5>Reorganização: regex</h5>
+                        <p><a href="https://regex.ingress.codes" target="_blank">regex.ingress.codes</a> para verificar se você tem uma <strong>Keyword</strong> em seu texto</p>
+                        <p>Às vezes você recebe um monte de letras e número, mas não sabe se você está na etapa final ou que tipo de rearranjo é necessário. Há um truque que você pode usar! Se você tem uma lista de possíveis palavras que existem em seu código,
+                            você pode usar <a href="https://pt.wikipedia.org/wiki/Express%C3%A3o_regular" target="_blank">expressões regulares</a> (regex) para pesquisar a lista de possíveis keywords que usam as letras que você tem! Por exemplo, em Ingress, os códigos
+                            diários têm o formato. Portanto, você pode usar regex para ver se uma keyword está presente. A lista de keywords são mantidas em vários lugares (por exemplo, <a href="https://ingress.codes/" target="_blank">ingress.codes</a> ou <a href="https://github.com/ingresscodes/keywords" target="_blank">seu repositório github</a>),
+                            para que você possa baixar e manter a lista você mesmo ou usar um site na internet como <a href="https://regex.ingress.codes" target="_blank">regex.ingress.codes</a>. Para pesquisar usando regex, digite onde você substitua o 6 pelo número de letras
+                            que aparecerão na keyword. Mais informações disponíveis aqui em <a href="https://ingress.codes/" target="_blank">ingress.codes</a> e aqui <a href="https://decodeingress.me" target="_blank">decodeingress.me</a>. <br><br><strong>aaa##keyword###aa ^[yourlistofcharacters]{6}$ {6}</strong></p>
+                        <p>Como exemplo: depois de decodificar e descriptografar, você começa e quer saber se há uma keyword nela. Há 5 números, então combina com o formato. Existem 13 letras, 5 das quais fazem parte do prefixo e sufixo, então a keyword
+                            tem 8 letras de comprimento. Por isso, entramos em <a href="https://regex.ingress.codes" target="_blank">regex.ingress.codes</a>. Ele encontrará todas as keywords que têm 8 caracteres e são compostas apenas das letras em nossa sequência de texto.
+                            O resultado: Então sabemos que temos uma boa senha com uma keyword de timezero e só temos que descobrir como reorganizar as letras!<br><br><strong>te68o5erezim2tk8uf > ^[te68o5erezim2tk8uf]{8}$ > timezero</strong></p>
+                        <h5>Substituição: Número rotativo de caracteres, cifras ROT</h5>
+                        <p>Você pode criptografar uma mensagem "girando" um certo número de caracteres. Aqui, "girar" significa trocar cada letra por <i>n</i> letras no alfabeto. A mais comum é <strong>ROT13</strong> ou <strong>Cipher César</strong>. Descriptografia
+                            e criptografia são as mesmas, é só que a soma total de rotações de descriptografia e criptografia tem que ser igual a 26. Assim, a criptografia <strong>ROT1</strong> pode ser descriptografada com <strong>ROT25</strong>. É por
+                            isso que o <strong>ROT13</strong> é popular - é criptografado e descriptografado da mesma forma. Alternativamente, você pode criptografar uma mensagem girando <i>n</i> para a esquerda e, em seguida, decodificar girando <i>n</i>                            para a direita.<br><br> <strong>HAL IBM h i z a</strong></p>
+                        <h5>Substituição: Variantes em cifras ROT</h5>
+                        <p>Você pode mudar o <i>n</i> da substituição com cada personagem. Por exemplo, se você tiver uma senha, você pode usá-la para criptografar e descriptografar uma mensagem. Isso se chama <a href="https://www.dcode.fr/vigenere-cipher" target="_blank">Vigenere cipher</a>.
+                            Posso usar a senha para criptografar uma mensagem. Primeiro, converta os números correspondentes das letras que compõem a senha, e em seguida, gire a mensagem pelos números correspondentes para a direita.<br><br> <strong>hello<br> this is a message<br> hello h,e,l,l,o<br> 8,5,12,12,15</strong></p>
+                        <p>
+                            <strong>
+                                msg: t  h  i  s    i  s    a    m  e  s  s  a  g  e<br>
+                                ROT: 8  5 12 12   15  8    5   12 12 15  8  5 12 12<br>
+                                out: a  l  t  d    w  z    e    x  p  g  z  e  r  p<br>
+                            </strong>
+                        </p>
+                        <p>Então a senha está criptografada. Para descriptografar, gire cada caractere na mensagem criptografada para a esquerda pelo número correspondente da senha. <strong>this is a message hello altd wz e xpgzerp</strong></p>
+                        <p>Como cifras de salto, há muitas variantes, e às vezes abordagens de força bruta são necessárias.</p>
+                        <h5>Substituição: Cifra Atbash</h5>
+                        <p>Outro método de substituição comum é inverter a ordem do alfabeto. Isso é conhecido como <a href="https://www.dcode.fr/atbash-cipher" target="_blank">Cifra Atbash: </a><strong>a z b y</strong></p>
+                        <h4>Técnicas comuns de codificação</h4>
+                        <p>Acima vimos que a <strong>criptografia</strong> usa cifras para alterar a ordem dos caracteres ou substituir um caractere por outro. Abaixo mostraremos técnicas onde você pode usar diferentes métodos de codificação para representar
+                            uma mensagem usando diferentes símbolos ou significados por trás dos caracteres. Portanto, você pode representar uma mensagem alterando a codificação da mensagem. Pense nisso como mudar o conjunto de caracteres de letras e
+                            números padrão (a-z A-Z 0-9, ou 62 caracteres diferentes) para outra coisa, ou os mesmos caracteres que significam outra coisa (por exemplo, em hexadecimal, significa "dez"). Há muitas, muitas maneiras de fazer isso, mas aqui
+                            estão algumas comuns:</p>
+                        <h5>Morse</h5>
+                        <p>O <a href="https://www.dcode.fr/morse-code" target="_blank">código Morse</a> é uma maneira extremamente comum de representar letras e números como pontos, traços e espaços.</p>
+                        <h5>ASCII</h5>
+                        <p>Há uma maneira padrão de representar letras em binário para que os computadores possam entendê-las chamada "ASCII". Isso representa cada personagem como um número. Para obter mais informações, consulte <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">wikipedia</a>                            ou procure <a href="http://www.asciitable.com/">tabelas ASCII</a>. Uma vez que você tenha esse número, você pode representar esse número de muitas maneiras diferentes: como um número binário, número decimal, número octal ou
+                            número hexadecimal. Por exemplo, está em decimal, que está em hexadecimal (hex), em octal, e em binário. Existem muitas ferramentas online para codificar e decodificar para você. Por exemplo, veja as ferramentas de <a href="https://decodeingress.me" target="_blank">decodeingress.me</a>.<br><br>                            <strong>91 61 141 01100001</strong></p>
+                        <p>Como você reconhece um código ASCII em uma base específica?</p>
+                        <ul>
+                            <li>Decimal: valores que variam de 32 a 126. são caracteres ASCII "imprimíveis". <strong>hello 104 101 108 108 111</strong></li>
+                            <li>Hex: São sequências de dois caracteres que consistem em um dígito e uma letra de A-F. Caracteres imprimíveis têm o primeiro dígito na faixa de 2-7. (ou seja, corresponde ao número 0). <strong>hello 68 65 6c 6c 6f</strong></li>
+                            <li>Octal: números de 3 dígitos que consistem nos dígitos 0-7. Personagens imprimíveis começam em 040 e terminam em 176. <strong>hello > 150 145 154 154 157</strong></li>
+                            <li>Binário: Grupos de 7 dígitos ou 8 dígitos sequência de 1s e 0s. Se houver uma sequência de 8 dígitos, o primeiro dígito é um 0. <strong>hello > 01101000 01100101 01101100 01101100 01101111</strong></li>
+                        </ul>
+                        <h5>A1Z26</h5>
+                        <p>Você pode representar cada letra do alfabeto com o número da ordem do alfabeto. Por exemplo, a primeira letra é <i>A</i> 26ª é, então o personagem recebe o número 1 e fica com o número 26. A palavra é, portanto, codificada como.
+                            Por exemplo, veja a ferramenta <a href="https://www.dcode.fr/letter-number-cipher" target="_blank">dcode.fr</a> <strong>a z a  z hello > 8 5 12 12 15</strong></p>
+                        <h5>Base64 (e outras BaseN)</h5>
+                        <p>Qualquer sequência de números binários pode ser representada como caracteres "imprimíveis" usando <a href="https://en.wikipedia.org/wiki/Base64" target="_blank">codificação base64</a>. Este é um grande truque que os codificadores usam para converter
+                            quase tudo com dois símbolos (por exemplo, binário) em texto legível. Um uso comum da base64 é pegar uma sequência ASCII de caracteres, codificá-lo como uma sequência binária de 1s e 0s, e convertê-lo em base64. Tudo isso pode
+                            ser facilmente tratado por muitas ferramentas online, como as ferramentas de <a href="decodificador.me" target="_blank">decodificador.me</a>.</p>
+                        <p>Como reconhecer a base64?</p>
+                        <ul>
+                            <li>Consiste em letras maiúsculas e minúsculas a-z, A-Z, números 0-9, sinal de mais e barra + /, e sinal de igual =</li>
+                            <li>Se os últimos caracteres são sinais iguais, é quase sempre base64 (ou base32, veja abaixo).</li>
+                            <li>Exemplo: hello > <strong>aGVsbG8=</strong></li>
+                        </ul>
+                        <p>Existem muitas outras variantes de baseN que codificam 1s e 0s (ou o binário ASCII 1s e 0s) em outros caracteres. É bom pesquisar e se familiarizar com aqueles em cyberchef, criptoii, e dcode.fr. Com quais caracteres são usados?
+                            Por exemplo, base32 usa apenas letras maiúsculas A-Z, números 2-7 e o sinal igual =. Por exemplo, veja a <a href="https://www.dcode.fr/base-32-encoding" target="_blank">ferramenta dcode.fr</a></p>
+                        <h4>Passos para decodificar/descriptografar uma mensagem</h4>
+                        <p>Agora que temos os "blocos de construção" para codificar, podemos abordar a decodificação!</p>
+                        <ol>
+                            <li>Você tem personagens no formato que você espera? Para códigos diários no jogo Ingress, seu código final será no formato: 5 dígitos e as demais letras. Então você tem 5 números e as outras letras? Se assim for, use os métodos
+                                de descriptografia da cifra acima para traduzir e substituir até que você tenha a solução. Você pode precisar de uma senha para usar alguns métodos de descriptografia (por exemplo, Vigenere), que podem estar escondidos
+                                em outro lugar. <strong>aaa##keyword###aa</strong></li>
+                            <li>Se você não tiver os caracteres certos/esperados, você pode tentar decodificar a mensagem usando os esquemas de codificação listados acima. Manipulá-lo deve lhe dar algo com caracteres e números como esperado.</li>
+                            <li>Vá para o passo 1 até que haja uma solução.</li>
+                        </ol>
+                        <h5>Exemplo</h5>
+                        <p>Vamos dar uma olhada no nosso parágrafo de introdução.<br><br> <strong>IXRuZW1uZXRoZ2lsbkUgZWh0IG5pb0o=</strong></p>
+                        <ol>
+                            <li>É um texto irreconhecível, mas consiste apenas de a-z, A-Z, 0-9, e termina em um sinal igual - então talvez seja codificação base64! Use o decodificador base64 do dcode.fr e veja o que acontece.</li>
+                            <li>Agora eu tenho algo com pontuação, espaços, letras minúsculas, e duas letras maiúsculas como uma frase! Mas a ordem parece estranha - a pontuação está na frente e uma letra maiúscula está na parte de trás. Isso parece a cifra
+                                inversa! Use dcode.fr ou outra ferramenta para ajudá-lo a reverter!</li>
+                        </ol>
+                        <h4>Conclusão e Resumo</h4>
+                        <p>Agora você pode ver os blocos de construção de resolver esses quebra-cabeças: usar combinações de cifras e esquemas de codificação para manipular uma mensagem para obter outra. Cifras alteram a ordem dos caracteres ou substituem
+                            um personagem por outro, esquemas de codificação alteram a representação de um conjunto de caracteres ou símbolos em outro conjunto de caracteres ou símbolos. Existem muitas, muitas maneiras de fazê-lo, aqui apenas foi apresentado
+                            algumas para começar, então agora é bom explorar e aprender o máximo que puder, tanto o que eles fazem quanto como eles funcionam!</p>
+                        <h5>Próximo passo?</h5>
+                        <p>Quer experimentar mais quebra-cabeças? Confira <a href="ingress.codes" target="_blank">ingress.codes</a> para uma coleção de quebra-cabeças anteriores com passo a passo da solução.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p align="center">
+        Feito com 💚 por <a href="https://t.me/suburbanizar" target="_blank">@Suburbanizar</a>, baseado em <a href="https://maqifrnswa.github.io/DecodingPrimer/" target="_blank">DecodingPrimer</a>.
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+body{
+    font-weight:400
+}
+html{
+    background-color:#0f0f0f
+}
+.container{
+    position:relative
+}
+html{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+body{
+    line-height:1.5
+}
+body,html{
+    font-size:100%
+}
+html{
+    box-sizing:border-box;
+    font-size:14px;
+    min-width:300px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    text-rendering:optimizeLegibility
+}
+body{
+    font-size:1rem
+}
+*{
+    box-sizing:inherit
+}
+body{
+    color:white !important;
+    font-family:"Roboto Mono" !important;
+    background-color:#0f0f0f !important
+}
+@media screen and (min-width: 1000px){
+    .container{
+        margin:0 auto;
+        max-width:960px
+    }
+}
+@media screen and (min-width: 1192px){
+    .container{
+        max-width:1152px
+    }
+}
+nav{
+    width:100%;
+    background:#0f0f0f;
+    height:80px;
+    position:fixed;
+    z-index:1
+}
+nav #brand{
+    float:left;
+    display:block;
+    margin-left:82px;
+    line-height:80px;
+    font-weight:bold
+}
+nav #brand a{
+    color:#fff;
+    transition:all 0.3s ease-out
+}
+nav #brand a:hover{
+    text-decoration:none
+}
+@media(max-width: 768px){
+    nav #brand{
+        margin-left:24px
+    }
+}
+.row{
+    margin-top:110px;
+    background-color:#0f0f0f;
+    font-color:white
+}
