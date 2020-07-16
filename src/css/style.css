@@ -1,40 +1,40 @@
 body{
-    font-weight:400
+    font-weight: 400;
 }
 html{
-    background-color:#0f0f0f
+    background-color:#0f0f0f;
 }
 .container{
-    position:relative
+    position: relative;
 }
 html{
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale
+    -moz-osx-font-smoothing:grayscale;
 }
 body{
-    line-height:1.5
+    line-height: 1.5;
 }
 body,html{
-    font-size:100%
+    font-size: 100%;
 }
 html{
-    box-sizing:border-box;
-    font-size:14px;
-    min-width:300px;
-    overflow-x:hidden;
-    overflow-y:scroll;
-    text-rendering:optimizeLegibility
+    box-sizing: border-box;
+    font-size: 14px;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
 }
 body{
-    font-size:1rem
+    font-size: 1rem;
 }
 *{
-    box-sizing:inherit
+    box-sizing: inherit;
 }
 body{
-    color:white !important;
-    font-family:"Roboto Mono" !important;
-    background-color:#0f0f0f !important
+    color: #cfcdcd !important;
+    font-family: "Roboto Mono" !important;
+    background-color:#0f0f0f !important;
 }
 @media screen and (min-width: 1000px){
     .container{
@@ -55,26 +55,42 @@ nav{
     z-index:1
 }
 nav #brand{
-    float:left;
-    display:block;
-    margin-left:82px;
-    line-height:80px;
-    font-weight:bold
+    float: left;
+    display: block;
+    margin-left: 82px;
+    line-height: 80px;
+    font-weight: bold;
 }
 nav #brand a{
-    color:#fff;
-    transition:all 0.3s ease-out
+    color:rgb(255, 255, 255);
 }
 nav #brand a:hover{
-    text-decoration:none
+    text-decoration: none;
 }
-@media(max-width: 768px){
-    nav #brand{
-        margin-left:24px
-    }
+nav #menu{
+    float: left;
+    right: 80px;
+    position: fixed;
+}
+nav #menu li{
+    padding-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 80px;
+    font-weight: bold;
+    position: relative;
+}
+nav #menu li span{
+    font-weight: 700;
+}
+nav #menu li a{
+    color:#fff;
+}
+nav #menu li a:hover{
+    text-decoration: none;
 }
 .row{
-    margin-top:110px;
+    margin-top: 110px;
     background-color:#0f0f0f;
-    font-color:white
 }
