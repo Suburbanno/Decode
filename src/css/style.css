@@ -31,6 +31,9 @@ body{
 *{
     box-sizing: inherit;
 }
+a {
+    color: #7cbd62 !important;
+}
 body{
     color: #cfcdcd !important;
     font-family: "Roboto Mono" !important;
@@ -62,7 +65,7 @@ nav #brand{
     font-weight: bold;
 }
 nav #brand a{
-    color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255) !important;
 }
 nav #brand a:hover{
     text-decoration: none;
@@ -85,7 +88,7 @@ nav #menu li span{
     font-weight: 700;
 }
 nav #menu li a{
-    color:#fff;
+    color:#fff !important;
 }
 nav #menu li a:hover{
     text-decoration: none;
@@ -93,4 +96,7 @@ nav #menu li a:hover{
 .row{
     margin-top: 110px;
     background-color:#0f0f0f;
+}
+strong {
+    color: rgb(233, 233, 233);
 }
