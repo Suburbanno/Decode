@@ -100,3 +100,28 @@ nav #menu li a:hover{
 strong {
     color: rgb(233, 233, 233);
 }
+#irtopo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #1b1b1b;
+    text-indent: -9999px;
+    display: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+#irtopo span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #7cbd62;
+}
