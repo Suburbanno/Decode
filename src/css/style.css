@@ -125,3 +125,9 @@ strong {
     border: 8px solid transparent;
     border-bottom-color: #7cbd62;
 }
+
+img.gameoflife {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    }

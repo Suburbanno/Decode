@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/src/img/favicon.png" sizes="32x32">
+    <title>Decode</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <span id="brand">
+                     <a href="/index.html">Decode</a>
+                  </span>
+                  <ul id="menu">
+                    <li><a href="examples.html">Exemplos</a></li>
+					<li><a href="https://github.com/Suburbanno/Decode" target="_blank">Source</a></li>
+			  </ul>
+        </nav>
+        <div class="container">
+            <div class="hero-content">
+                <br><br>
+                <div class="row">
+                    <img class="col-lg-12">
+                        <h3>13 Archetypes: Humanist</h3>
+                        <p>Este é o desafio 6, o desafio humanist. Aqueles que gostam da mente encontrarão o caminho para uma recompensa única e um lugar de glória. Quando encontrar sua solução, digite o passcode em: <a href="https://intel.ingress.com/intel" target="_blank">intel.ingress.com/intel</a></p>
+                        <img class="gameoflife" src="https://storage.googleapis.com/ingress-internal-event-data/13archetypes/humanist/humanist2_a6f9854f-6e0c-5050-a10d-91f4aaa4c382.png" width="600">
+            <p>Olhando para a imagem temos a seguinte informação:<br><br>
+            <i><strong>Chakras, humors, spirits –– you realize they were all grasping at things you always understood naturally. The core essence of a human’s life force is a thing that you can touch and affect at will.</strong></i><br><br>e o que parece ser o formato do passcode:<br><br><strong>??????<*>????</strong></p>
+            <p>O que importa é o quadrado menor que lembra um layout do <i>Tetris</i>, possue as dimenssões 27x27, ou seja, 27 linhas e 27 colunas.</p>
+            <p>Depois de uma longa pesquisa, descobrimos que o layout se parece muito com o <a href="https://pt.wikipedia.org/wiki/Jogo_da_vida">jogo da vida de Conway</a>.<br>O jogo possue as seguintes regras:</p>
+            <ol>
+                <li>Cada célula possui dois estados - vivos ou mortos, e cada célula interage com as oito células circundantes, centradas em si (imagem: preto está vivo, branco está morto)</li>
+                <li>Quando a célula atual está em um estado vivo, quando há menos de 2 células circundantes (excluindo 2), a célula fica morta. (A vida simulada é escassa)</li>
+                <li>Quando a célula atual está em um estado viável, quando há 2 ou 3 células viáveis ao redor, a célula permanece como está.</li>
+                <li>Quando a célula atual está em um estado viável, quando há mais de 3 células viáveis ao redor, a célula fica morta. (Muitas vidas simuladas)</li>
+                <li>Quando a célula atual está morta, e quando há 3 células sobreviventes, a célula se torna viável. (Reprodução de simulação)</li>
+            </ol>
+            <p>Para resolver iremos recriar o grid no site <a href="https://www.dcode.fr/game-of-life">dcode.fr/game-of-life</a>, sendo necessário configurar o grid nas dimenssões 27x27.<br>Resultado:</p>
+            <img src="/src/img/grid2.jpg">
+            <p>Para resolver, precisamos apenas de uma geração, então um clique em "next" basta para termos o seguinte resultado:</p>
+            <img src="/src/img/qrcode.jpg" width="230" height="248">
+            <p>Usando qualquer leitor de Qrcode, seja sites ou aplicativos como o Google Lens, é retornado o seguinte código:<br><br><strong>AJTC8ADEVRA13AR</strong></p><br>
+            </div>
+        </div>
+    </div>
+    <p align="center" id="ex">
+        Feito com 💚 por <a href="https://t.me/suburbanizar" target="_blank">@Suburbanizar</a>, baseado em <a href="https://maqifrnswa.github.io/DecodingPrimer/" target="_blank">DecodingPrimer</a>.
+    </p>
+    <a href="javascript:void(0);" id="irtopo" title="Ir para o topo" style="display: none;">Topo<span></span></a>
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('#irtopo').fadeIn();
+                } else {
+                    $('#irtopo').fadeOut();
+                }
+            });
+            $('#irtopo').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+        function iraotoponew(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        }
+    </script>
+</body>
+
+</html>
